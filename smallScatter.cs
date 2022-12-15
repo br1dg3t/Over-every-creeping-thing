@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class plantScatter : MonoBehaviour
+public class smallScatter : MonoBehaviour
 {
     public GameObject obj;
-    // Start is called before the first frame update
     void Start()
     {
         if(!obj.name.Contains("Clone")){
             for(int i = 0; i<200; i++){
-                Instantiate(obj, new Vector3(Random.Range(-45,45),22,Random.Range(-25,25)), Quaternion.Euler(0,0,0)); //create clone
+                Instantiate(obj, new Vector3(Random.Range(-10,10),Random.Range(8,15),Random.Range(-8,8)), Quaternion.Euler(0,Random.Range(0,90),0)); //create clone
             }
         }
     }
